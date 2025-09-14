@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIP-MODE-PANEL</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <img src="assets/logo.png" alt="logo" class="logo">
+    <div class="top-text">
+      <div class="headline">100% VIP — बेहतरीन वेबसाइट</div>
+      <div class="subhead">How wonderful this website is — VIP-MODE-PANEL</div>
+    </div>
+    <button id="activeBtn" class="active-btn">Active users</button>
+  </div>
+
+  <main class="container">
+    <section class="panel">
+      <h1>VIP-MODE-PANEL</h1>
+      <p class="rules">BIG = 5–9, SMALL = 0–4. One number per result. Press <strong>Randomize</strong> then <strong>Pull Pot</strong>.</p>
+
+      <div class="controls">
+        <button id="randomizeBtn" class="btn">🔁 Randomize</button>
+        <button id="pullBtn" class="btn primary">🎰 Pull Pot</button>
+      </div>
+
+      <div class="display-row">
+        <div class="card" id="previewCard">
+          <div class="label">PREVIEW</div>
+          <div class="number" id="previewNumber">—</div>
+          <div class="size" id="previewSize">—</div>
+          <div class="color-chip" id="previewColor">----</div>
+        </div>
+
+        <div class="card" id="finalCard">
+          <div class="label">FINAL</div>
+          <div class="number" id="finalNumber">—</div>
+          <div class="size" id="finalSize">—</div>
+          <div class="color-chip" id="finalColor">----</div>
+        </div>
+      </div>
+
+      <div class="history-wrap">
+        <h3>History</h3>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Active users popup -->
+  <div id="activePopup" class="popup hidden" role="dialog" aria-modal="true">
+    <div class="popup-card">
+      <div class="popup-title">Active Users</div>
+      <div class="popup-number" id="activeNumber">10,235</div>
+      <div class="popup-note">Currently online across the platform</div>
+      <button id="closePopup" class="close-btn">Close</button>
+    </div>
+  </div>
+
+<audio id="popSound" src="assets/pop.wav" preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

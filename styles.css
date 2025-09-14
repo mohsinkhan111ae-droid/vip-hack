@@ -1,0 +1,48 @@
+/* Styles for VIP-MODE-PANEL demo */
+:root{
+  --bg: linear-gradient(135deg,#0f1724 0%, #071029 100%);
+  --card:#0b1220;
+  --muted:#a8b3bd;
+  --accent1:#ff4d4f;
+  --accent2:#ffd166;
+  --accent3:#33b5e5;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#eaf2f8;min-height:100vh;}
+.topbar{display:flex;align-items:center;gap:16px;padding:12px 20px;background:rgba(255,255,255,0.02);backdrop-filter:blur(4px)}
+.logo{width:46px;height:46px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);}
+.top-text{flex:1}
+.headline{font-weight:900;font-size:18px;letter-spacing:1px;color:var(--accent2)}
+.subhead{font-size:12px;color:var(--muted)}
+
+.active-btn{background:linear-gradient(90deg,var(--accent3),var(--accent2));border:none;padding:8px 12px;border-radius:8px;color:#061224;font-weight:800;cursor:pointer}
+
+.container{display:flex;justify-content:center;padding:28px}
+.panel{width:980px;max-width:95%;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.04)}
+
+h1{margin:0;font-size:22px}
+.rules{color:var(--muted);font-size:13px;margin-top:6px}
+
+.controls{display:flex;gap:10px;margin-top:14px}
+.btn{padding:10px 14px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:#fff;cursor:pointer;font-weight:700}
+.btn.primary{background:linear-gradient(90deg,var(--accent2),#ff8a00);color:#061224;box-shadow:0 8px 30px rgba(255,140,0,0.12)}
+
+.display-row{display:flex;gap:18px;margin-top:18px}
+.card{flex:1;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:18px;border-radius:12px;min-height:160px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.label{font-size:12px;color:var(--muted);font-weight:800}
+.number{font-size:64px;font-weight:900;margin-top:8px;letter-spacing:4px}
+.size{margin-top:6px;color:var(--muted);font-weight:800}
+.color-chip{margin-top:8px;padding:6px 12px;border-radius:999px;font-weight:800;color:#061224;background:#ddd}
+
+.history-wrap{margin-top:18px}
+.history-list{max-height:220px;overflow:auto;margin-top:8px;display:flex;flex-direction:column;gap:8px}
+.history-item{display:flex;justify-content:space-between;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);font-weight:700;color:var(--muted)}
+
+.popup{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.5)}
+.popup.hidden{display:none}
+.popup-card{background:linear-gradient(180deg,#071029,#081826);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);text-align:center;min-width:260px}
+.popup-title{font-weight:900;color:var(--accent2);margin-bottom:8px}
+.popup-number{font-size:32px;font-weight:900;color:var(--accent3);margin-bottom:6px}
+.popup-note{color:var(--muted);margin-bottom:12px}
+.close-btn{padding:8px 12px;border-radius:8px;border:none;background:var(--glass);color:#fff;cursor:pointer}
